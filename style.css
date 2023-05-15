@@ -1,6 +1,7 @@
-* {
+*{
   margin: 0;
   padding: 0;
+
 }
 
 .container {
@@ -9,7 +10,13 @@
   height: 100vh;
   background: #f3f5fc;
 }
-
+ .logo{
+  position: absolute;
+    left: 36.67px;
+    right: 37.43%;
+    top: 3%;
+    bottom: 0%;
+}
 .texto {
   position: absolute;
   width: 42%;
@@ -141,7 +148,7 @@
   gap: 16px;
   position: absolute;
   width: 100%;
-  top: 50%;
+  top: 65%;
   text-align: center;
 }
 
@@ -167,11 +174,19 @@
   color: #495057;
 }
 
-.encriptado img {
+.encriptado textarea {
   position: absolute;
-  width: 50%;
-  height: 30%;
+  width: 80%;
+  background-image: url("Imagenes/muñeco.png");
+  background-repeat: no-repeat;
+  height: 48%;
   top: 15%;
+  border: none;
+}
+.tex-area2:focus,
+  .tex-area2:active {
+  border: none;
+  outline: none;
 }
 .copiar{
   width: 328px;
@@ -179,7 +194,9 @@
   border-radius:24px;
   border:solid 1px #0a3871;
 
-  margin-top:128%;
+
+  margin-top:158%;
+  color: #0a3871;
   cursor: pointer;
 }
 
@@ -224,7 +241,7 @@
   }
   .encriptado {
     width: 80%;
-    height:30%;
+    height:50%;
     left: 10%;
     top: 80%;
   }
@@ -232,9 +249,17 @@
     width: 100%;
     top: 5%;
   }
-  .encriptado img {
+  .encriptado textarea {
     top: 0;
     display: none;
     visibility: hidden;
+    
+  }
+  
+  .copiar{
+    width:200px;
+    height:40px;
+    margin-bottom:20px;
+    border-radius:10px;
   }
 }

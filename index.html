@@ -10,6 +10,78 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
+    
+    <div class="container">
+      <header>
+        <img class="logo" src="Imagenes/logo.png" alt="">
+      </header>
+      <div class="encriptar">
+        <textarea
+          name="texto"
+          class="texto"
+          id="texto"
+          cols="30"
+          rows="10"
+          placeholder="Ingresa el texto aquí"
+        ></textarea>
+
+        <div class="terminos">
+          <p>Solo letras minúsculas y sin acentos.</p>
+        </div>
+        <div class="botones">
+          <button class="btn-encriptar" type="button" onclick="encriptar()">
+            Encriptar
+          </button>
+          <input
+            type="button"
+            class="btn-desencriptar"
+            value="Desencriptar"
+            onclick="desencriptar()"
+          />
+        </div>
+      </div>
+      <div class="encriptado">
+        <textarea class="tex-area2" name="" id="muñeco" cols="30" rows="10"></textarea>
+        <div class="mensaje-encriptado" id="mensaje-encriptado">
+          <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+          <p id="parrafo">
+            Ingresa el texto que deseas encriptar o desencriptar
+          </p>
+        </div>
+        <div >
+          <button class="copiar">Copiar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
     <main class="container">
       <section class="encriptar">
         <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto aquí
@@ -19,12 +91,12 @@
           <p>Solo letras minúsculas y sin acentos.</p>
         </div>
         <div class="botones">
-          <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+          <button class="btn-encriptar" type="encriptar" onclick="encriptar()">Encriptar</button>
           <button class="btn-desencriptar" type="desencriptar" onclick="desencriptar()">Desencriptar</button>
         </div>
       </section>
       <section class="encriptado">
-        <img  src="Imagenes/muñeco.png" alt=""/>
+        <img  id="munieco" src="Imagenes/muñeco.png" alt=""/>
         <div class="mensaje-encriptado" id="mensaje-encriptado">
           <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
           <p id="parrafo">
@@ -34,6 +106,6 @@
         <button class="copiar">Copiar</button>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
-  <script src="index.js"></script>
 </html>
