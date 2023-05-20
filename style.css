@@ -3,6 +3,9 @@
   padding: 0;
 
 }
+body{
+  font-family: 'Montserrat', sans-serif;
+}
 
 .container {
   position: relative;
@@ -42,7 +45,7 @@
   outline: none;
 }
 
-.terminos {
+.alerta {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -54,7 +57,7 @@
   top: 80%;
 }
 
-.terminos p {
+.alerta p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -67,7 +70,7 @@
   flex-grow: 0;
 }
 
-.botones {
+.buttones {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -98,19 +101,19 @@
 }
 
 .btn-desencriptar {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  
+  align-items: center;
+  
+  
   justify-content: center;
   padding: 2%;
   gap: 8px;
   width: 25%;
   background: #d8dfe8;
-  border: 1px solid #0a3871;
+  border:  #0a3871;
   border-radius: 24px;
   font-family: "Inter";
-  font-weight: 400;
+  
   font-size: 18px;
   line-height: 19px;
   text-align: center;
@@ -177,31 +180,42 @@
 .encriptado textarea {
   position: absolute;
   width: 80%;
-  background-image: url("Imagenes/muñeco.png");
+  
+  background-image: url(Imagenes/muñeco.png);
   background-repeat: no-repeat;
   height: 48%;
   top: 15%;
   border: none;
+  font-size: 22px;
+  text-transform: lowercase;
 }
-.tex-area2:focus,
-  .tex-area2:active {
+.mensaje:focus,
+  .mensaje:active {
   border: none;
   outline: none;
+
 }
+
+
+
 .copiar{
-  width: 328px;
+  position: relative;
+  width: 300px;
   height: 60px;
   border-radius:24px;
   border:solid 1px #0a3871;
+  display:none;
 
-
-  margin-top:158%;
+  top:85%;
   color: #0a3871;
   cursor: pointer;
 }
 
-/* Responsive design */
-@media (max-width: 57.5em) {
+
+
+
+/* Responsive*/
+@media (max-width: 850px) {
   .container {
     display: flex;
     flex-direction: row;
@@ -211,9 +225,9 @@
   }
   .texto {
     width: 80%;
-    height: 60%;
+    height: 40%;
     left: 10%;
-    top: 5%;
+    top: 20%;
   }
   .terminos {
     width: 80%;
@@ -223,15 +237,16 @@
   .terminos p {
     font-size: 16px;
   }
-  .botones {
+  .buttones {
+    display: flex;
     width: 80%;
     left: 10%;
-    top: 70%;
+    top: 400px;
   }
   .btn-encriptar,
   .btn-desencriptar {
     width: 48%;
-    border-radius: 16px;
+    border-radius: 10px;
   }
   .btn-encriptar:hover,
   .btn-desencriptar:hover {
@@ -240,26 +255,45 @@
     padding: 1.8%;
   }
   .encriptado {
-    width: 80%;
-    height:50%;
-    left: 10%;
+    display: flex;
+    width: 100%;
+    height:70%;
+    left: 1%;
     top: 80%;
   }
   .mensaje-encriptado {
-    width: 100%;
-    top: 5%;
+    width: 80%;
+    top: 75%;
+    left: 6%;
+    
   }
   .encriptado textarea {
-    top: 0;
-    display: none;
-    visibility: hidden;
+    top: 10%;
+    height: 60%;
     
   }
   
   .copiar{
-    width:200px;
+    
+    top: 90%;
+    width:360px;
     height:40px;
-    margin-bottom:20px;
+    right: 8px;
     border-radius:10px;
+  }
+  
+    
+  
+}
+@media (max-width: 450px){
+  .texto{
+    font-size: 20px;
+  }
+  
+  .copiar{
+    top:95%;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
   }
 }
