@@ -46,7 +46,7 @@ body{
 }
 
 .alerta {
-  display: flex;
+  display:flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
@@ -70,10 +70,11 @@ body{
   flex-grow: 0;
 }
 
-.buttones {
+.botones {
+  
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items:flex-start;
   padding: 1% 0;
   position: absolute;
   width: 80%;
@@ -215,10 +216,13 @@ body{
 
 
 /* Responsive*/
+
+
+
 @media (max-width: 850px) {
   .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: ;
   }
   .encriptar {
     width: 100%;
@@ -229,16 +233,16 @@ body{
     left: 10%;
     top: 20%;
   }
-  .terminos {
-    width: 80%;
-    left: 10%;
-    top: 67%;
+  
+  .alerta{
+    top:60%;
   }
-  .terminos p {
+  .alerta p {
     font-size: 16px;
   }
-  .buttones {
-    display: flex;
+  .botones {
+    
+    
     width: 80%;
     left: 10%;
     top: 400px;
@@ -255,7 +259,7 @@ body{
     padding: 1.8%;
   }
   .encriptado {
-    display: flex;
+    
     width: 100%;
     height:70%;
     left: 1%;
@@ -285,10 +289,20 @@ body{
     
   
 }
-@media (max-width: 450px){
-  .texto{
-    font-size: 20px;
+@media (max-width:450px){
+  .alerta{
+    top: 47%;
   }
+  
+  .alerta p{
+    font-size: 12px;
+  }
+ .botones{
+  
+  width: 80%;
+  left: 10%;
+  top: 320px;
+ }
   
   .copiar{
     top:95%;
