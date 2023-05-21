@@ -2,10 +2,7 @@
 function encriptar(){
     const textoEncriptado = encriptar(munieco.value)
     texto.value = textoEncriptado
-    munieco.value = "";
-    
-    
-    
+    munieco.value = "";  
 }
 
 function encriptar() {
@@ -71,7 +68,7 @@ function desencriptar(){
       } else {
         munieco.src = "./imagenes/muñeco.png";
         tituloMensaje.textContent = "Ningún mensaje fue encontrado";
-        parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+        parrafo.textContent = "";
         swal("Ooops!", "Debes ingresar un texto", "warning");
       }
   }

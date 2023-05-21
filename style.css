@@ -3,9 +3,6 @@
   padding: 0;
 
 }
-body{
-  font-family: 'Montserrat', sans-serif;
-}
 
 .container {
   position: relative;
@@ -86,7 +83,7 @@ body{
 .btn-encriptar {
   align-items: center;
   justify-content: center;
-  padding: 2%;
+  padding: 18px;
   gap: 8px;
   width: 25%;
   background-color: #0a3871;
@@ -102,19 +99,15 @@ body{
 }
 
 .btn-desencriptar {
-  
   align-items: center;
-  
-  
   justify-content: center;
-  padding: 2%;
+  padding: 18px;
   gap: 8px;
   width: 25%;
   background: #d8dfe8;
-  border:  #0a3871;
+  border: solid #0a3871;
   border-radius: 24px;
   font-family: "Inter";
-  
   font-size: 18px;
   line-height: 19px;
   text-align: center;
@@ -152,7 +145,7 @@ body{
   gap: 16px;
   position: absolute;
   width: 100%;
-  top: 65%;
+  top: 70%;
   text-align: center;
 }
 
@@ -168,7 +161,8 @@ body{
 }
 
 .mensaje-encriptado p {
-  width: 80%;
+  position: absolute;
+  width: 70%;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -204,9 +198,8 @@ body{
   width: 300px;
   height: 60px;
   border-radius:24px;
-  border:solid 1px #0a3871;
+  border:solid  #0a3871;
   display:none;
-
   top:85%;
   color: #0a3871;
   cursor: pointer;
@@ -215,99 +208,76 @@ body{
 
 
 
-/* Responsive*/
+/* Aplicando esponsive al css*/
 
 
 
-@media (max-width: 850px) {
+@media (max-width: 57.5em){
   .container {
     display: flex;
-    flex-direction: ;
+    flex-direction:row ;
   }
   .encriptar {
     width: 100%;
   }
   .texto {
     width: 80%;
-    height: 40%;
+    height: 60%;
     left: 10%;
-    top: 20%;
+    top: 13%;
   }
   
   .alerta{
     top:60%;
+    
   }
   .alerta p {
     font-size: 16px;
+    
   }
   .botones {
     
-    
     width: 80%;
     left: 10%;
-    top: 400px;
+    top: 65%;
   }
   .btn-encriptar,
   .btn-desencriptar {
     width: 48%;
-    border-radius: 10px;
+    border-radius: 16px;
   }
+  
   .btn-encriptar:hover,
   .btn-desencriptar:hover {
-    margin: 0.3%;
-    width: 47.5%;
-    padding: 1.8%;
+    transform:scale(1);
   }
+  
   .encriptado {
     
     width: 100%;
-    height:70%;
+    height:45%;
     left: 1%;
-    top: 80%;
+    top: 90%;
   }
+  
   .mensaje-encriptado {
-    width: 80%;
-    top: 75%;
-    left: 6%;
+    width: 100%;
+    left: 3%;
+    top: 110%;
     
   }
   .encriptado textarea {
-    top: 10%;
-    height: 60%;
-    
+    top: 80%;
+    height: 80%;
+    top: 20%;
   }
   
   .copiar{
     
-    top: 90%;
-    width:360px;
+    top: 150%;
+    width:200px;
     height:40px;
     right: 8px;
     border-radius:10px;
-  }
-  
-    
-  
-}
-@media (max-width:450px){
-  .alerta{
-    top: 47%;
-  }
-  
-  .alerta p{
-    font-size: 12px;
-  }
- .botones{
-  
-  width: 80%;
-  left: 10%;
-  top: 320px;
- }
-  
-  .copiar{
-    top:95%;
-    width: 250px;
-    height: 40px;
-    border-radius: 10px;
   }
 }
