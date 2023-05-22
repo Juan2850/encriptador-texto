@@ -107,7 +107,7 @@ function desencriptar(){
     let copiarTexto = document.getElementById("munieco");
     copiarTexto.select();
     document.execCommand("copy");
-     
+    document.getElementById("texto").value = "";
   }
 
   document.getElementById("botonCopiar").addEventListener("click", btnCopiar);
