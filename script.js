@@ -1,16 +1,37 @@
-
 function encriptar(){
     const textoEncriptado = encriptar(munieco.value)
     texto.value = textoEncriptado
-    munieco.value = "";  
+    munieco.value = "";
+
 }
+function foco() {
+  document.getElementById("texto").focus();
+}
+function limpiar() {
+  document.getElementById("texto").value = "";
+  document.getElementById("munieco").value = "";
+}
+
+
+const letras = /[A-Z~!@#$%^&*()_+|}{[\]\\\/?=><:"`;.,áéíóúàèìòù'1-9]/g;
+
 
 function encriptar() {
   let texto = document.getElementById("texto").value;
   let tituloMensaje = document.getElementById("titulo-mensaje");
   let parrafo = document.getElementById("parrafo");
   let munieco = document.getElementById("munieco");
+    if (texto.match(letras) != null){
+      
+      munieco.src = "./imagenes/muñeco.png";
+       
+      swal("Ooops!", "Solo letras minúsculas y sin acentos", "warning");
+      //document.getElementById("munieco").value = "none";
+      document.getElementById(munieco).value = ""
+      
+    }
     
+  
     let textoCifrado = texto
       .replace(/e/gi, "enter")
       .replace(/i/gi, "imes")
@@ -21,14 +42,11 @@ function encriptar() {
     if (texto.length != 0) {
       document.getElementById("munieco").value = textoCifrado;
       tituloMensaje.textContent = "Texto encriptado con éxito";
-      parrafo.textContent = "";
       munieco.style.backgroundImage = "none"
       document.querySelector('.copiar').style.display = 'block'
-    } else {
+     } else {
       munieco.src = "./imagenes/muñeco.png";
       tituloMensaje.textContent = "Ningún mensaje fue encontrado";
-      parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-      
       swal("Ooops!", "Debes ingresar un texto", "warning");
     }
   }
@@ -51,6 +69,16 @@ function desencriptar(){
     let tituloMensaje = document.getElementById("titulo-mensaje");
     let parrafo = document.getElementById("parrafo");
     let munieco = document.getElementById("munieco");
+
+    if (texto.match(letras) != null){
+      
+      munieco.src = "./imagenes/muñeco.png";
+       
+      swal("Ooops!", "Solo letras minúsculas y sin acentos", "warning");
+      //document.getElementById("munieco").value = "none";
+      document.getElementById(munieco).value = ""
+      
+    }
   
     let textoCifrado = texto
       .replace(/enter/gi, "e")
@@ -62,13 +90,14 @@ function desencriptar(){
       if (texto.length != 0) {
         document.getElementById("munieco").value = textoCifrado;
         tituloMensaje.textContent = "Texto desencriptado con éxito";
-        parrafo.textContent = "";
+        
         munieco.style.backgroundImage = "none"
+        document.querySelector('.copiar').style.display = 'block'
         
       } else {
         munieco.src = "./imagenes/muñeco.png";
         tituloMensaje.textContent = "Ningún mensaje fue encontrado";
-        parrafo.textContent = "";
+        
         swal("Ooops!", "Debes ingresar un texto", "warning");
       }
   }
