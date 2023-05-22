@@ -1,6 +1,6 @@
 function encriptar(){
-    const textoEncriptado = encriptar(munieco.value)
-    texto.value = textoEncriptado
+    const textoEncriptado = encriptar(munieco.value);
+    texto.value = textoEncriptado;
     munieco.value = "";
 
 }
@@ -26,8 +26,8 @@ function encriptar() {
       munieco.src = "./imagenes/muñeco.png";
        
       swal("Ooops!", "Solo letras minúsculas y sin acentos", "warning");
-      //document.getElementById("munieco").value = "none";
-      document.getElementById(munieco).value = ""
+      
+      document.getElementById(munieco).value = "";
       
     }
     
@@ -42,8 +42,8 @@ function encriptar() {
     if (texto.length != 0) {
       document.getElementById("munieco").value = textoCifrado;
       tituloMensaje.textContent = "Texto encriptado con éxito";
-      munieco.style.backgroundImage = "none"
-      document.querySelector('.copiar').style.display = 'block'
+      munieco.style.backgroundImage = "none";
+      document.querySelector('.copiar').style.display = 'block';
      } else {
       munieco.src = "./imagenes/muñeco.png";
       tituloMensaje.textContent = "Ningún mensaje fue encontrado";
@@ -56,8 +56,8 @@ function encriptar() {
 
 
 function desencriptar(){
-    const textoEncriptado = desencriptar(munieco.value)
-    texto.value = textoEncriptado
+    const textoEncriptado = desencriptar(munieco.value);
+    texto.value = textoEncriptado;
     munieco.value = "";
     
     
@@ -75,8 +75,8 @@ function desencriptar(){
       munieco.src = "./imagenes/muñeco.png";
        
       swal("Ooops!", "Solo letras minúsculas y sin acentos", "warning");
-      //document.getElementById("munieco").value = "none";
-      document.getElementById(munieco).value = ""
+      
+      document.getElementById(munieco).value = "";
       
     }
   
@@ -91,8 +91,8 @@ function desencriptar(){
         document.getElementById("munieco").value = textoCifrado;
         tituloMensaje.textContent = "Texto desencriptado con éxito";
         
-        munieco.style.backgroundImage = "none"
-        document.querySelector('.copiar').style.display = 'block'
+        munieco.style.backgroundImage = "none";
+        document.querySelector('.copiar').style.display = 'block';
         
       } else {
         munieco.src = "./imagenes/muñeco.png";
